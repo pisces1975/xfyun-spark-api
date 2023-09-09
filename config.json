@@ -1,13 +1,13 @@
 {
   "spark_info": {
-    "app_id": "XXXXXXXX",
-    "api_secret": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-    "api_key": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "app_id": "eea6a7c3",
+    "api_secret": "MTc4MGUyMWM1NGRiMWMzN2M1YWExMzU3",
+    "api_key": "f88d9c3a61ba9dd9c0263476ac1c2a6f",
     "domain": "generalv2",
     "Spark_url": "ws://spark-api.xf-yun.com/v2.1/chat",
     "prompt": "If you don't know just say that you don't know.",
     "prompt_special": "",
-    "temperature": 0.5,
+    "temperature": 0.9,
     "top_k": 4,
     "max_tokens": 2048,
     "flow_print": "true",

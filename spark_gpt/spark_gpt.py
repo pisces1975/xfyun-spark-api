@@ -151,6 +151,15 @@ class SparkGPT(object):
         self.this_question_tokens = ""  # 本次问题的tokens数，在多轮会话中，也是累计问题tokens数
         self.all_tokens = 0  # 累计消耗tokens总数
 
+    def get_tokens(self) -> int:
+        return self.all_tokens
+    
+    def get_cost(self, num=0) -> float:
+        if num == 0:
+            return 0.000036 * self.all_tokens
+        else:
+            return 0.000036 * num
+    
     # 设置设置max_tokens，传入[1,4096]之间的数字
     def set_max_tokens(self, value):
         try:
@@ -402,9 +411,9 @@ class SparkGPT(object):
 
     def count_money(self, tokens):
         if self.domain == "generalv2":
-            return f"{0.00032 * tokens} 元"
+            return f"{0.000036 * tokens} 元"
         elif self.domain == "generalv1":
-            return f"{0.00018 * tokens} 元"
+            return f"{0.000018 * tokens} 元"
         else:
             return "（计算出错）"
 
